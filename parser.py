@@ -36,5 +36,5 @@ for province_data in R.html.find("tr.provincetr td", first=False):
     percent += 1
 
 FO = open("country.json", "w", encoding="utf-8")
-FO.write(json.dumps(COUNTRY))
+FO.write(json.dumps(COUNTRY, ensure_ascii=False, indent=4, separators=(',', ':')))
 FO.close()
